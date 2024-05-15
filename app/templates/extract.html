@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if error is defined %}
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Wrong product id or the product has no opinions :(
+    </div> 
+    {% endif %}
+    <form method="POST" action="{{url_for('extract')}}">
+        <div class="sendform">
+                <label for="product_id">Product code</label>
+                <input
+                    name="product_id"
+                    id="product_id"
+                    aria-describedby="product_idHelpInLine"
+                    autocomplete="off"
+                    inputmode="search"
+                    placeholder="Enter product ID"
+                    type="text"
+                    required
+                >
+                <span id="product_idHelpInLine" class="form-text">Product code must be 5-10 digits long.</span>
+                </input>
+        </div>
+        <button type="submit">Extract</button>
+    </form>
+
+    <p>This is extract file.</p>
+    {% endblock %}

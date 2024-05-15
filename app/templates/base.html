@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href={{url_for('static', filename="base_style.css")}}>
+    <title>Ceneo.pl Web Scraper</title>
+</head>
+<body>
+    <header class="container">
+        <h1>Ceneo.pl Web Scraper</h1>
+    </header>
+    <div class="columns">
+        <div class=""><a href="{{url_for('index')}}"><h2>Main page</h2></a>
+        </div>
+        <h2>|</h2>
+        <div><a href="{{url_for('extract')}}"><h2>Extraction</h2></a>
+        </div>
+        <h2>|</h2>
+        <div><a href="{{url_for('products')}}"><h2>Products</h2></a>
+        </div>
+        <h2>|</h2>
+        <div><a href="{{url_for('author')}}"><h2>About author</h2></a></div>
+    </div>
+    <section>
+        {% block content %}
+            <p>This is base file.</p>
+        {% endblock %}
+    </section>
+    <footer>
+        <p>Dawid Szmitka, Kraków University of Economics</p>
+    </footer>
+</body>
+</html>
