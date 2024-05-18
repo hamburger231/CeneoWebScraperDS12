@@ -5,70 +5,111 @@
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
-    color: rgb(149, 130, 71);
+    color: #8D6A9F;
   }
+p {
+    text-align: center;
+}
 body {
-    background-color: rgb(68, 67, 63);
+    background-color: #222;
+}
+.columns3 {
+    justify-content: space-evenly;
+    display: flex;
+    column-count: 3;
+}
+.pic {
+    width: 380.7px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.menu {
+    height: 20vh;
 }
 h1 {
     font-weight: 800;
     text-align: center;
-    padding-top: 3%;
+    line-height: 30px;
 }
 h2 {
     font-size: 30px;
     font-weight: 100;
     line-height: 39px;
     word-wrap: break-word;
+    text-align: center;
+    font-style: italic;
+    
+}
+h3 {
+    font-weight: 600;
+    font-size:xx-large;
+    text-align: center;
 }
 .columns {
     width: 64%;
     height: 15%;
-    margin-left: 18%;
-    align-self: center;
-    align-items: center;
     display: flex;
     justify-content: space-evenly;
     column-count: 7;
+    margin: 0 auto;
 }
 a {
     text-decoration: none;
 }
-
-
+.container {
+    position:relative;
+    width: 100%;
+    height: 70vh;
+}
+.boxnbg {
+    background-color: #c5cbd3;
+    justify-content: center;
+    width: 70%;
+    align-items: center;
+    margin: 0 0 0 15%;
+    padding: 1% 0 2% 0;
+    border-radius: 12px;
+    
+}
+/* form container */
 .sendform {
-    top: 50%;
+    position: absolute;
+    top: 35%;
+    display: flex;
+    left: 57%;
+    flex-direction: row;
+    align-items: center;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
+}
+#product_idHelpInLine {
+    position: relative;
+    right: 15%;
 }
 /* footer */
 .wrapper {
-    min-height: calc(100vh - 70px);
-  }
-.footer {
-    height: 50px;
+    justify-content: center;
   }
 .mid {
     vertical-align: middle;
     display: flex;
     justify-content: center;
-/*button*/
+/*form*/
 }
 input{
+    position:fixed;
+    right: 50%;
     border: none;
     padding: 10px;
     margin: 10px;
     height: 20px;
     width: 500px;
-    border:1px solid #eaeaea;
-    background-color: #222;
+    background-color: #c5cbd3;
     outline:none;
+    border-radius: 5px;
 }
 input:hover{
     border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
@@ -99,7 +140,7 @@ input[type="submit"]:hover {
 /* ALERT */
 .alert {
     padding: 20px;
-    background-color: #f44336; 
+    background-color: #dda448; 
     color: white;
     margin-bottom: 15px;
     text-align: center;
@@ -125,6 +166,7 @@ input[type="submit"]:hover {
     color: black;
 }
 
+/* button */
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 #intro {
@@ -133,9 +175,12 @@ input[type="submit"]:hover {
 }
 
 [class*="btn-glitch-"] {
+    border-radius: 5px;
+  top: 40%;
+  position: absolute;
   display: inline-block;
   font-family: "VT323", monospace;
-  border: 1px solid grey;
+  border: 1px solid #c5cbd3;
   color: gray;
   padding: 10px 13px;
   min-width: 175px;
@@ -154,7 +199,7 @@ input[type="submit"]:hover {
   &:hover, &:focus {
     animation-name: glitch;
     animation-duration: 0.2s;
-    background-color: green;
+    background-color: #0e0d0d;
     color:black;
     border: 1px solid black;
     .text-decoration {
@@ -206,24 +251,24 @@ input[type="submit"]:hover {
 
 @keyframes glitch {
   25% {
-    background-color: red;
+    background-color: #BB342F;
     transform: translateX(-10px);
     letter-spacing: 10px;
   }
   35% {
-    background-color: green;
+    background-color: #dda448;
     transform: translate(10px);
   }
   59% {
     opacity: 0;
   }
   60% {
-    background-color: blue;
+    background-color: #c7dd48;
     transform: translate(-10px);
     filter: blur(5px);
   }
   100% {
-    background-color: green;
+    background-color: #1d243f;
     blur: (5px);
   }
 }

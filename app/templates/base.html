@@ -11,29 +11,32 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="container">
-            <h1>Ceneo.pl Web Scraper</h1>
-        </header>
-        <div class="columns">
-            <div class=""><a href="{{url_for('index')}}"><h2>Main page</h2></a>
+        <div class="menu">
+            <header>
+                <h1>Ceneo.pl Web Scraper</h1>
+            </header>
+            <div class="columns">
+                <div class=""><a href="{{url_for('index')}}"><h2>Main page</h2></a>
+                </div>
+                <h2>|</h2>
+                <div><a href="{{url_for('extract')}}"><h2>Extraction</h2></a>
+                </div>
+                <h2>|</h2>
+                <div><a href="{{url_for('products')}}"><h2>Products</h2></a>
+                </div>
+                <h2>|</h2>
+                <div><a href="{{url_for('author')}}"><h2>About author</h2></a></div>
             </div>
-            <h2>|</h2>
-            <div><a href="{{url_for('extract')}}"><h2>Extraction</h2></a>
-            </div>
-            <h2>|</h2>
-            <div><a href="{{url_for('products')}}"><h2>Products</h2></a>
-            </div>
-            <h2>|</h2>
-            <div><a href="{{url_for('author')}}"><h2>About author</h2></a></div>
         </div>
         <section class="container">
             {% block content %}
                 <p>This is base file.</p>
             {% endblock %}
         </section>
+        <footer class="mid">
+            <p>Dawid Szmitka, Kraków University of Economics</p>
+        </footer>
     </div>
-    <footer class="mid">
-        <p>Dawid Szmitka, Kraków University of Economics</p>
-    </footer>
+    
 </body>
 </html>

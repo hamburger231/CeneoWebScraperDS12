@@ -8,7 +8,6 @@
     {% endif %}
     <form method="POST" action="{{url_for('extract')}}">
         <div class="sendform">
-                <label for="product_id" class="buttonstart">Enter product code</label>
                 <input
                     style="scale: 1.5;"
                     name="product_id"
@@ -20,7 +19,7 @@
                     type="text"
                     required
                 >
-                <span id="product_idHelpInLine" class="form-text">Product code must be 5-10 digits long.</span>
+                <span id="product_idHelpInLine">Product code must be 5-10 digits long.</span>
                 </input>
         </div>
         <div class="mid">
