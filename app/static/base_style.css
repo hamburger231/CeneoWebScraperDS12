@@ -5,14 +5,21 @@
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
+    color: rgb(149, 130, 71);
   }
-
+body {
+    background-color: rgb(68, 67, 63);
+}
 h1 {
     font-weight: 800;
     text-align: center;
+    padding-top: 3%;
 }
 h2 {
-    color: black; font-size: 30px; font-weight: 100; line-height: 39px; word-wrap: break-word;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 39px;
+    word-wrap: break-word;
 }
 .columns {
     width: 64%;
@@ -25,14 +32,33 @@ h2 {
     column-count: 7;
 }
 a {
-    color: black;
     text-decoration: none;
 }
+
+
 .sendform {
-    align-self: center;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     align-items: center;
     display: flex;
-    justify-content: space-evenly
+    justify-content: space-evenly;
+}
+/* footer */
+.wrapper {
+    min-height: calc(100vh - 70px);
+  }
+.footer {
+    height: 50px;
+  }
+.mid {
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+/*button*/
 }
 input{
     border: none;
@@ -41,6 +67,7 @@ input{
     height: 20px;
     width: 500px;
     border:1px solid #eaeaea;
+    background-color: #222;
     outline:none;
 }
 input:hover{
@@ -77,6 +104,12 @@ input[type="submit"]:hover {
     margin-bottom: 15px;
     text-align: center;
     border-radius: 7px;
+    position:absolute;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    top: 25%;
+
 }
 .closebtn {
     margin-left: 15px;
@@ -90,4 +123,119 @@ input[type="submit"]:hover {
 }
 .closebtn:hover {
     color: black;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+#intro {
+  color: white;
+  font-family: "VT323", monospace;
+}
+
+[class*="btn-glitch-"] {
+  display: inline-block;
+  font-family: "VT323", monospace;
+  border: 1px solid grey;
+  color: gray;
+  padding: 10px 13px;
+  min-width: 175px;
+  line-height: 1.5em;
+  white-space: no-wrap;
+  text-transform: uppercase;
+  cursor: pointer;
+  .text,
+  .decoration {
+    display: inline-block;
+  }
+  .decoration {
+    display: inline-block;
+    
+  }
+  &:hover, &:focus {
+    animation-name: glitch;
+    animation-duration: 0.2s;
+    background-color: green;
+    color:black;
+    border: 1px solid black;
+    .text-decoration {
+      animation-name: blink;
+      animation-duration: 0.1s;
+      animation-iteration-count: infinite;
+    }
+    .decoration {
+      animation-name: blink;
+      animation-duration: 0.1s;
+      animation-iteration-count: infinite;
+    }
+    :before {
+      content: " ";
+      width: 15px;
+      border: 1px solid black;
+      position: absolute;
+      right: 25%;
+      bottom: 3px;
+      transform: rotate(35deg)
+    }
+    :after {
+      animation-name: shrink;
+      animation-duration:.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode : forwards;
+      content: " ";
+      width: 75%;
+      border: 1px solid black;
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+    }
+  }
+  &:active {
+    background: none;
+    color:forestgreen;
+    .text-decoration {
+      animation-name: none;
+    }
+    .decoration {
+      animation-name: none;
+    }
+    :before, :after {
+      display: none;
+    }
+  }
+}
+
+@keyframes glitch {
+  25% {
+    background-color: red;
+    transform: translateX(-10px);
+    letter-spacing: 10px;
+  }
+  35% {
+    background-color: green;
+    transform: translate(10px);
+  }
+  59% {
+    opacity: 0;
+  }
+  60% {
+    background-color: blue;
+    transform: translate(-10px);
+    filter: blur(5px);
+  }
+  100% {
+    background-color: green;
+    blur: (5px);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes shrink {
+  100% {
+    width: 10%;
+  }
 }
