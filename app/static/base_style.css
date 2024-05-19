@@ -63,13 +63,13 @@ a {
 }
 .boxnbg {
     background-color: #c5cbd3;
+    background-image: url(https://github.com/hamburger231/CeneoWebScraperDS12/blob/main/app/static/images/spider-web-computer-icons-clip-art-web.jpg);
     justify-content: center;
-    width: 70%;
+    width: 40%;
     align-items: center;
-    margin: 0 0 0 15%;
+    margin: 0 0 0 30%;
     padding: 1% 0 2% 0;
-    border-radius: 12px;
-    
+    border-radius: 99999px;
 }
 /* form container */
 .sendform {
