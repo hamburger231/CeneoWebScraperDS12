@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="boxnbg">
-    <h3>//<br>project's purpose<br>//</h3>
-    <p>The ceneo web scraper is designed to extract opinions from a product page <br>and display them conviniently for a user as well as saving them for later</p>
+    <h3>project's purpose</h3>
+    <p>//</p>
+    <p>The ceneo.pl web scraper is designed to extract opinions statistics from a product page <br>and display them conviniently for a user as well as saving them for later</p>
+    <p>The application awaits for the product code and if provided, it checks the server response of the product site.<br>
+        If response is ok, it proceeds to extract the whole site DOM using BeautifulSoup and then using selectors it grabs all opinions and their parts<br>
+        and puts them into a JSON file using pandas and JSON library.<br></p>
+    <p>//</p>
+    <h3>libraries used</h3>
+    <p>//</p>
+    <p>Requests,  Pandas,  Numpy, 
+        <br>GoogleTranslator,  BeautifulSoup,  JSON
+        <br>Matplotlib</p>
+    <p>//</p>
 </div>
 {% endblock %}

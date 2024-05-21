@@ -65,9 +65,11 @@ a {
     background-color: #c5cbd3;
     justify-content: center;
     width: 70%;
+    position: relative;
+    height: 90%;
     align-items: center;
     margin: 0 0 0 15%;
-    padding: 1% 0 2% 0;
+    padding: 1px 0 0% 0;
     border-radius: 12px;
     
 }
