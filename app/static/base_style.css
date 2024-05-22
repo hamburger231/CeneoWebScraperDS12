@@ -148,10 +148,10 @@ input[type="submit"]:hover {
     text-align: center;
     border-radius: 7px;
     position:absolute;
-    width: 80%;
-    left: 10%;
-    right: 10%;
-    top: 25%;
+    width: 30%;
+    left: 35%;
+    right: 35%;
+    top: 18%;
 
 }
 .closebtn {
