@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Product {{product_id}} opinions:</h1>
-    {{opinions}}
+    <div class="">
+        <a href="{{url_for('download_json', product_id=product_id)}}">JSON</a>
+        <a href="{{url_for('download_csv', product_id=product_id)}}">CSV</a>
+        <a href="{{url_for('download_xlsx', product_id=product_id)}}">XLSX</a>
+    </div>
+    <a href="{{url_for('charts', product_id=product_id)}}">Charts</a>
+    {{opinions | safe}}
+{% endblock %}
+{% block scripts %}
+<script>let table = new DataTable('#opinions', {});</script>
 {% endblock %}
