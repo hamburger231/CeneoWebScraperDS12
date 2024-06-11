@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Product {{product_id}} opinions:</h1>
-    <div class="">
-        <a href="{{url_for('download_json', product_id=product_id)}}">JSON</a>
-        <a href="{{url_for('download_csv', product_id=product_id)}}">CSV</a>
-        <a href="{{url_for('download_xlsx', product_id=product_id)}}">XLSX</a>
+    <div class="buttons">
+        <a class="coolbuttonlol" href="{{url_for('download_json', product_id=product_id)}}"><span class="txt">JSON</span></a>
+        <a class="coolbuttonlol" href="{{url_for('download_csv', product_id=product_id)}}"><span class="txt">CSV</span></a>
+        <a class="coolbuttonlol" href="{{url_for('download_xlsx', product_id=product_id)}}"><span class="txt">XLSX</span></a>
     </div>
-    <a href="{{url_for('charts', product_id=product_id)}}">Charts</a>
+    <div class="buttons">
+        <a class="chartbtn" href="{{url_for('charts', product_id=product_id)}}"><span class="txt">charts</span></a>
+    </div>
     {{opinions | safe}}
 {% endblock %}
 {% block scripts %}

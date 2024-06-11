@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block custom_head %}
+<link rel="stylesheet" href={{url_for('static', filename="form_style.css")}}>
+{% endblock %}
 {% block content %}
     {% if error is defined %}
     <div class="alert">

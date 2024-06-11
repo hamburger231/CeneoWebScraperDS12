@@ -1,5 +1,25 @@
 {% extends 'base.html' %}
+{% block custom_head %}
+<link rel="stylesheet" href={{url_for('static', filename="cards_styles.css")}}>
+{% endblock %}
 {% block content %}
-    <h2>list of products</h2>
-    <p>{{products}}</p>
+<div class="card-container">
+    <div class="ag-courses_box">
+        {% for product in products %}
+        <div class="ag-courses_item">
+          <a href="/product/{{product.product_id}}" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg">
+            </div>
+            <div class="ag-courses-item_title">
+              {{product.product_name}}
+            </div>
+            <div class="ag-courses-item_date-box">
+                ID:<span class="ag-courses-item_date">{{product.product_id}}</span>
+            </div>
+          </a>
+        </div>
+    {% endfor%}
+    </div>
+</div>
+    
 {% endblock %}

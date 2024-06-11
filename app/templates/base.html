@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script rel="stylesheet" src="//cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
     <link rel="stylesheet" href={{url_for('static', filename="base_style.css")}}>
+    {% block custom_head %}
+    {% endblock %}
     <title>Ceneo.pl Web Scraper</title>
 </head>
 <body>
