@@ -58,7 +58,7 @@ def extract():
                     'opinions_count' : opinions_count,
                     'pros_count' : int(opinions.pros.astype(bool).sum()),
                     'cons_count' : int(opinions.pros.astype(bool).sum()),
-                    'average_count' : (opinions.stars.mean()*MAX_SCORE).round(3),
+                    'average_count' : (opinions.stars.mean()).round(2),
                     'score_distribution' : opinions.stars.value_counts().reindex(np.arange(0.5,5.5,0.5)).to_dict(),
                     'recommendation_distribution' : opinions.recommendation.value_counts(dropna=False).reindex([1,np.nan,0]).to_dict(),
                 }
