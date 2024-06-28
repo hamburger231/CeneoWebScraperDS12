@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="boxnbg">
     <p>This is charts {{product_id}} file. </p>
+    <img src="data:image/png;base64{{ url_for('send_chart', product_id=product_id) }}">
+</div>
 {% endblock %}
